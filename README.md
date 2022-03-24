@@ -1,0 +1,2 @@
+this is the final project in the javascript curriculum of the odin project.
+the requirements are that the app has two have at least two routes, a home and shopping page, individual cards for items, an add to cart option and a checkout section.
