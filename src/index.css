@@ -1,7 +1,9 @@
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "Lucida Grande", arial, helvetica, sans-serif
 }
 
 * {
@@ -30,3 +32,47 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+.homeContainer, .shopContainer {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 30px;
+  gap: 5px;
+  padding: 5px;
+}
+
+.categories {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+}
+
+a {
+  font-weight: 700;
+  color: inherit;
+}
+
+.stickyBar {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  z-index: 10000;
+}
+
+.cartContainer {
+  margin-right: 400px;
+}
