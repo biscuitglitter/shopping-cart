@@ -6,8 +6,8 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="categories">
-      <Link to="/" style={{ textDecoration: 'none' }}>Home</Link>       
-      <Link to="/shop" style={{ textDecoration: 'none' }}>Shop</Link>       
+      <Link to="/" style={{ textDecoration: 'none', fontSize: "14px" }}>Home</Link>       
+      <Link to="/store" style={{ textDecoration: 'none', fontSize: "14px" }}>Store</Link>       
       </div>
       </div>
   )

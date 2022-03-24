@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 
 *,
 *::before,
@@ -8,6 +9,7 @@
 
 * {
   margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 html,
@@ -32,10 +34,11 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-.homeContainer, .shopContainer {
-  margin: 10px;
+.homeContainer, .storeContainer {
+  margin: 100px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: 14px;
   margin-top: 25px;
 }
@@ -56,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  font-weight: 700;
+  font-weight: 650;
   color: inherit;
 }
 
@@ -74,5 +77,70 @@ a {
 }
 
 .cartContainer {
-  margin-right: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  max-width: 400px;
+  margin-right: 75px;
+}
+
+.booksDisplay {
+  display: flex;
+  width: 1200px;
+  flex-wrap: wrap;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 100%;
+}
+
+.loadingSpinner {
+  width: 100px;
+}
+
+.bookContainer, .booksDisplay {
+  cursor: pointer;
+}
+
+.bookContainer {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 270px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.bookCovers {
+  float: left;
+  width:  175px;
+  height: 175px;
+  object-fit: cover;
+} 
+
+
+.bookDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 50px;
+  width: 175px;
+}
+
+.goHomeLink {
+  margin-bottom: 25px;
+}
+
+.loading {
+  width: 50px;
+}
+
+.icons {
+  width: 32px;
 }

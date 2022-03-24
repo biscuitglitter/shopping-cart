@@ -6,6 +6,7 @@ const StickyBar = () => {
       <div className="stickyBar">
        <div className="cartContainer">
       <Link to="/cart" style={{ textDecoration: "none" }}>My cart</Link>
+      <Link to="/checkout" style={{ textDecoration: "none" }}>Checkout</Link>
           </div> 
     </div>
   )
