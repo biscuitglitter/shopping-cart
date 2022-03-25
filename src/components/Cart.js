@@ -1,11 +1,11 @@
 import React from "react"
-import { Link } from "react-router-dom"
 
-const Cart = () => {
+const Cart = ({ notifications }) => {
+  
+  console.log(notifications)
   return (
-    <div>
-    <Link to="/" style={{ textDecoration: "none" }}> <img className="icons" src="./img/icons8-go-back-48.png" /></Link> 
-    <Link to="/checkout">checkout</Link>
+    <div className="cartContainer">
+      you have {notifications} items
     </div>
   )
 }

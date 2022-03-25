@@ -34,20 +34,22 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-.homeContainer, .storeContainer {
-  margin: 100px;
+.homeContainer, .storeContainer, .cartContainer {
+  margin: 85px;
   display: flex;
+  width: 1200px;
   flex-direction: column;
   justify-content: center;
   font-size: 14px;
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .navbar {
+  margin-top: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 30px;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 20px;
   gap: 5px;
   padding: 5px;
 }
@@ -56,6 +58,7 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 20px;
   font-size: 13px;
+  cursor: pointer;
 }
 
 a {
@@ -64,31 +67,51 @@ a {
 }
 
 .stickyBar {
-  margin-top: 10px;
+  margin-top: 8px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 1200px;
   align-items: center;
   z-index: 10000;
 }
 
-.cartContainer {
+.topNavigation {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 10px;
-  max-width: 400px;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
   margin-right: 75px;
 }
 
-.booksDisplay {
+.cartWrapper, .checkoutWrapper {
   display: flex;
-  width: 1200px;
+  flex-direction: row;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+
+.booksDisplay, .newestBooks {
+  display: flex;
   flex-wrap: wrap;
+}
+
+.newestBooks {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h2 {
+  font-size: 14px;
 }
 
 .loadingContainer {
@@ -97,7 +120,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 1200px;
-  height: 100%;
+  height: 500px;
 }
 
 .loadingSpinner {
@@ -111,6 +134,8 @@ a {
 .bookContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 270px;
   font-size: 12px;
@@ -124,7 +149,6 @@ a {
   object-fit: cover;
 } 
 
-
 .bookDetails {
   display: flex;
   flex-direction: column;
@@ -133,14 +157,10 @@ a {
   width: 175px;
 }
 
-.goHomeLink {
-  margin-bottom: 25px;
-}
-
 .loading {
   width: 50px;
 }
 
-.icons {
-  width: 32px;
+.iconSizes {
+  font-size: 15px;
 }
