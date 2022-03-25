@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="categories">
       <Link to="/" style={{ textDecoration: "none", fontSize: "14px" }}><span>Home</span></Link>       
-      <Link to="/store" style={{ textDecoration: "none", fontSize: "14px" }}><span>Store</span></Link>       
+      <Link to="/store" style={{ textDecoration: "none", fontSize: "14px" }} > <span>Store</span> </Link>
       </div>
       </div>
   )

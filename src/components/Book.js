@@ -12,14 +12,14 @@ const Book = ({ book, addToCart }) => {
   }
 
   return (
-       <Card id={book.isbn13} sx={{ maxWidth: 220 }}>
+       <Card className="bookContainer" id={book.isbn13} sx={{ maxWidth: 220 }}>
         <CardContent>
         <CardMedia component="img" image={book.image} />
-        <Typography sx={{ fontSize: 14 }} color="text.primary">
+        <Typography sx={{ fontSize: 13, minHeight: 40, maxHeight: 40 }} color="text.primary">
         {book.title}
         </Typography>
       </CardContent>
-        <button onClick={handleClick} id={book.isbn13} size="small">add to cart</button>
+        <button className="button" onClick={handleClick} id={book.isbn13} size="small">add to cart</button>
       </Card>
       )
 }

@@ -34,7 +34,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-.homeContainer, .storeContainer, .cartContainer {
+.homeContainer, .storeContainer, .cartContainer, .checkoutContainer {
   margin: 85px;
   display: flex;
   width: 1200px;
@@ -43,6 +43,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   margin-top: 50px;
 }
+
 
 .navbar {
   margin-top: 50px;
@@ -74,7 +75,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 1200px;
+  width: 95%;
   align-items: center;
   z-index: 10000;
 }
@@ -137,9 +138,11 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 200px;
-  height: 270px;
+  height: 300px;
   font-size: 12px;
   text-align: center;
+  text-overflow: ellipsis;
+overflow: hidden;
 }
 
 .bookCovers {
@@ -163,4 +166,35 @@ h2 {
 
 .iconSizes {
   font-size: 15px;
+}
+
+.ListOfBooksPicked {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  width: 800px;
+}
+
+.title {
+  color: black;
+  font-weight: 600;
+  width: 400px;
+}
+
+.count {
+  color: green;
+  font-weight: 400;
+  width: 100px;
+}
+
+.price {
+  color: blue;
+  width: 150px;
+}
+
+.button {
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
 }
