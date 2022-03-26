@@ -35,8 +35,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .homeContainer, .storeContainer, .cartContainer, .checkoutContainer {
-  margin: 85px;
   display: flex;
+  margin: 85px;
   width: 1200px;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +44,9 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-top: 50px;
 }
 
+.checkoutContainer {
+  width: 500px; 
+}
 
 .navbar {
   margin-top: 50px;
@@ -186,7 +189,7 @@ overflow: hidden;
 }
 
 .price {
-  width: 100px;
+  width: 150px;
 }
 
 .button {
@@ -202,4 +205,17 @@ table, th, td {
 td {
   border: 1px solid;
   padding: 0.5em;
+}
+
+button {
+  cursor: pointer;
+}
+
+.tables {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+  align-items: center;
+  width: 1000px;
+
 }

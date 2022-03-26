@@ -5,9 +5,9 @@ const DisplayBooks = ({ books, addToCart }) => {
  
     return (
         <div className="booksDisplay"> 
-        {books.map((book) => {
+        {books.map((book, idx) => {
         return (
-          <Book book={book} id={book.isbn13} addToCart={addToCart} key={book.isbn13} />
+          <Book book={book} id={book.isbn13} addToCart={addToCart} key={book.isbn13 + idx} />
         )
         })}
     </div>

@@ -10,7 +10,7 @@ const Home = () => {
     useEffect(() => {
         axios.get("https://api.itbook.store/1.0/new")
         .then(res => {
-         setBooks(_.take(_.shuffle(res.data.books), 3))
+          setBooks(_.take(_.shuffle(res.data.books), 3))
         })
     }, []);  
   

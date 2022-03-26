@@ -12,7 +12,7 @@ const Book = ({ book, addToCart }) => {
   }
 
   return (
-       <Card className="bookContainer" id={book.isbn13} sx={{ maxWidth: 220 }}>
+    <Card className="bookContainer" id={book.isbn13} sx={{ maxWidth: 220 }}>
         <CardContent>
         <CardMedia component="img" image={book.image} />
         <Typography sx={{ fontSize: 13, minHeight: 40, maxHeight: 40 }} color="text.primary">

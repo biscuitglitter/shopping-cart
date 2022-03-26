@@ -28,7 +28,6 @@ const Store = () => {
     const newList = [...addedItems, book]
     setAddedItems(newList)
     setNotifications(newList.length)
-    console.log(notifications)
   }
   
   useEffect(() => {

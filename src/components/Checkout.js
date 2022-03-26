@@ -11,48 +11,41 @@ const Checkout = () => {
   const location = useLocation()
   const { addedItems } = location.state
   const data = addedItems
-  const [list, setList] = useState(addedItems)
+  const [list, setList] = useState(data)
 
   const handleClick = (e) => {
     e.preventDefault()
-    removeItem(e.currentTarget.id)
-    "clicked!"
+    removeBook(e.currentTarget.id)
   }
 
-  const removeItem = (id) => {
-    setList(addedItems.filter(item => item.isbn13 !== id.toString()));
+  const removeBook = (id) => {
+    let found = list.find(book => book.isbn13 === id)
+    let newList = list.filter(book => book !== found)
+    setList(newList)
   }
-
-  // let length 
-
-  // if (data !== 0) {
-  //   length === data.length
-  // } else {
-  //   length === 0
-  // }
-  // console.log( _.values(_.groupBy(data)).map(d => ({name: d[0], count: d.length})))
 
   return (
     <div className="checkoutContainer">
-      <StickyBar notifications={length} />
       <Link to="/store" style={{ textDecoration: "none" }}> <ArrowBackIcon /> </Link>
-      {addedItems.length === 0 ? <div>You don't have any items in your cart yet</div> :
-        data.map(book => {
+      <div className="tables">
+      {addedItems.count === 0 ? <div>You don't have any items in your cart yet</div> :
+        list.map((book, idx) => {
           return (
-            <center key={book.isbn13}>
-              <table  book={book} id={book.isbn13} className="encounters">
+            <center key={book.isbn13 + idx}>
+              <table>
                 <tbody>
-                <tr>
-                  <td className="title">{book.title}</td>
-                  <td className="price">{book.price}</td>
-                  {/* <td className="length">{book.length}</td> */}
-                  <td><button type="button" onClick={handleClick} id={book.isbn13}>Remove</button></td>
-                </tr>
+                  <tr>
+                    <td className="title">{book.title}</td>
+                    <td className="price">{book.price}</td>
+                    {/* <td className="length">{book.count}</td> */}
+                    <td><button type="button" onClick={handleClick} idx={idx} id={book.isbn13}>Remove</button></td>
+                  </tr>
                 </tbody>
               </table>
             </center>
           )
         })}
+        </div>
     </div>
   )
 }
