@@ -11,6 +11,7 @@ const Home = () => {
         axios.get("https://api.itbook.store/1.0/new")
         .then(res => {
           setBooks(_.take(_.shuffle(res.data.books), 3))
+           // shuffles array and then takes 3 random items 
         })
     }, []);  
   
