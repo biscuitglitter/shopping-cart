@@ -8,32 +8,51 @@ import StickyBar from "./StickyBar"
 import _, { set } from "lodash"
 
 const Checkout = () => {
-const location = useLocation()
-const { addedItems } = location.state
-  
-let length 
-const data = addedItems
+  const location = useLocation()
+  const { addedItems } = location.state
+  const data = addedItems
+  const [list, setList] = useState(addedItems)
 
-  if (data !== 0) {
-    length === data.length
-  } else {
-    length === 0
+  const handleClick = (e) => {
+    e.preventDefault()
+    removeItem(e.currentTarget.id)
+    "clicked!"
   }
-  console.log( _.values(_.groupBy(data)).map(d => ({name: d[0], count: d.length})))
-  
+
+  const removeItem = (id) => {
+    setList(addedItems.filter(item => item.isbn13 !== id.toString()));
+  }
+
+  // let length 
+
+  // if (data !== 0) {
+  //   length === data.length
+  // } else {
+  //   length === 0
+  // }
+  // console.log( _.values(_.groupBy(data)).map(d => ({name: d[0], count: d.length})))
+
   return (
     <div className="checkoutContainer">
       <StickyBar notifications={length} />
       <Link to="/store" style={{ textDecoration: "none" }}> <ArrowBackIcon /> </Link>
-      {addedItems.length === 0 ? <div>You don't have any items in your cart yet</div> : 
-      data.map(book => {
-        return (
-          <div className="ListOfBooksPicked" book={book} id={book.isbn13} key={book.isbn13}>
-              <span className="title">{book.title}</span> <span className="count">{book.length}</span>
-              <span className="price">{book.price}</span>
-          </div>
-        )
-      })}
+      {addedItems.length === 0 ? <div>You don't have any items in your cart yet</div> :
+        data.map(book => {
+          return (
+            <center key={book.isbn13}>
+              <table  book={book} id={book.isbn13} className="encounters">
+                <tbody>
+                <tr>
+                  <td className="title">{book.title}</td>
+                  <td className="price">{book.price}</td>
+                  {/* <td className="length">{book.length}</td> */}
+                  <td><button type="button" onClick={handleClick} id={book.isbn13}>Remove</button></td>
+                </tr>
+                </tbody>
+              </table>
+            </center>
+          )
+        })}
     </div>
   )
 }

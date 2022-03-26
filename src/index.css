@@ -177,24 +177,29 @@ overflow: hidden;
 }
 
 .title {
-  color: black;
-  font-weight: 600;
-  width: 400px;
+  font-weight: 400;
+  width: 250px;
 }
 
 .count {
-  color: green;
-  font-weight: 400;
-  width: 100px;
+  width: 70px;
 }
 
 .price {
-  color: blue;
-  width: 150px;
+  width: 100px;
 }
 
 .button {
   border: none;
   font-size: 14px;
   cursor: pointer;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+td {
+  border: 1px solid;
+  padding: 0.5em;
 }
