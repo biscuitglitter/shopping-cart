@@ -6,12 +6,12 @@ import LoadingSpinner from "./LoadingSpinner"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import axios from "axios";
 import _, { set } from "lodash"
-import { useLocation } from "react-router-dom"
 
 const Store = () => {
   const [loading, setLoading] = useState(false)  
   const [addedItems, setAddedItems] = useState([])
   const [notifications, setNotifications] = useState(0)
+  
   // settings the notifications to 0 instead of () helps in two ways: (two assumptions) 
   // the variable is a number (integer)
   // count starts from 1 instead of 0 (real world logic)

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import Navbar from "./components/Navbar"
-import StickyBar from "./components/StickyBar";
+import StickyBar from "./components/StickyBar"
 import axios from "axios"
-import _, { set } from 'lodash'
+import _, { set } from "lodash"
 
 const Home = () => {
   const [books, setBooks] = useState([])   
@@ -26,7 +26,7 @@ const Home = () => {
       {books.map((book) => {
         return (
           <div className="bookContainer" book={book} id={book.isbn13} key={book.isbn13}>
-            <img src={book.image} /> <span> {book.price} </span>
+            <img src={book.image} />  <span> {book.title} </span> <span> {book.price} </span>
             </div>
         )
       })}
