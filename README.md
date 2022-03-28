@@ -1,6 +1,6 @@
 shopping cart
 
-_project reflections_
+_project reflections_ <br>
 the first challenge was figuring out how to use <Link> in react-router and determine when to use either of Link and Route <br>
 the second one was the bug I kept getting, "a memory leak because of a react state update happening on an unmounted component which i couldnt figure out. <br>
 i also spent a lot of time trying to find ways to use API call results in two differents components by calling it once
